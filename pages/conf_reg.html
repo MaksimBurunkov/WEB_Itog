@@ -1,0 +1,112 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/conf_reg.css">
+        <title>Регистрация на конференцию </title>
+    </head>
+    <body>
+        <section class="banner">
+            <div class="container">
+                <header>
+                    <div class="welcome">
+                        <div class="aboutus">
+                            <a class="logo"><img src="../img/logo.png" id="logo" alt="logo" /></a>
+                            <div class="textaboutus">
+                                <h1>Название компании</h1>
+                            
+    
+                                <p>Лучшая
+                                </p>
+                            </div>
+                        </div>
+                        <div class="phonenumber">
+                            <p>+7 (449) 777-77-77</p>
+                            <p>+7 (449) 777-77-77</p>
+                        </div>
+                    </div>
+                        
+                    <nav>
+                        <ul>
+                            <li><a href="../home.html">Главная</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Прайс-лист</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </section>
+        <section class="content">
+        </section>
+        <div class="container">
+            <section class="information">
+                <form action="" method="post">
+                    <div class="us">
+                        <div>
+                            <label for="user_name">Фамилия, имя, отчество</label><br>
+                            <input type="text" name="user_name" id="user_name" required placeholder="Иванов Иван Иванович" pattern="[А-ЯЁ][а-яё]+[ ][А-ЯЁ][а-яё]+[ ][А-ЯЁ][а-яё]+[ ]*">
+                        </div>
+                        <div>
+                            <label for="date">Дата рождения</label><br>
+                            <input type="date" id="dob" name="dob" >
+                        </div>
+                        <div>
+                            <label for="tel">Контактный телефон</label><br>
+                            <input type="tel" name="tel" id="tel" required value="+7" pattern="[+][7][1234567890]+" minlength="12" maxlength="12">
+                        </div>
+                        <div>
+                            <label for="email">Адрес электронной почты</label><br>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="dok">
+                        <div>
+                            <label for="section">Выберите секцию конференции</label><br>
+                            <select name="section" id="section">
+                                <option value="mat">Математика</option>
+                                <option value="fiz">Физика</option>
+                                <option value="inf">Информатика</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="speaker">Доклад</label>
+                            <input type="checkbox" name="speaker" id="speaker">
+                        </div>
+                        <div>
+                            <label for="report">Введите тему доклада</label><br>
+                            <textarea name="report" id="report" cols="30" rows="7"></textarea>
+                        </div>
+                        <div>
+                            <div>Выберите форму участия</div><br>
+                            <input type="radio" checked name="edutype" id="offline"> <label for="offline">Очная форма</label><br>
+                            <input type="radio" name="edutype" id="online"> <label for="online">Дистанционная форма</label><br>
+                            <input type="radio" name="edutype" id="online_offline"> <label for="online_offline">смешанная форма</label>
+                        </div>
+                    </div>
+                    <div class="reg">
+                        <input type="submit" value="Зарегистрироваться">
+                    </div>
+                </form>
+            </section>
+        </div>
+        <section class="footer">
+            <div class="container">
+                <div class="contact">
+                    <p>ОАО Компания</p>
+                    <div class="copynav">
+                            <a href="../home.html">Главная</a>
+                            <a href="#">Каталог</a>
+                            <a href="#">Доставка и оплата</a>
+                            <a href="#">Прайс-лист</a>
+                            <a href="#">Контакты</a>
+                    </div>
+                    <a href="#">Разработка сайтов</a>
+                </div>
+            </div>
+        </section>
+    
+    </body>
+    </html>
