@@ -1,0 +1,157 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/test.css">
+	<title>Верстка по шаблону </title>
+</head>
+<body>
+	<section class="banner">
+		<div class="container">
+			<header>
+				<div class="welcome">
+					<div class="aboutus">
+						<a class="logo"><img src="../img/logo.png" id="logo" alt="logo" /></a>
+						<div class="textaboutus">
+							<h1>Название компании</h1>
+						
+
+							<p>Лучшая
+							</p>
+						</div>
+					</div>
+					<div class="phonenumber">
+						<p>+7 (449) 777-77-77</p>
+						<p>+7 (449) 777-77-77</p>
+					</div>
+				</div>
+					
+				<nav>
+					<ul>
+						<li><a href="../home.html">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">Прайс-лист</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</section>
+	<section class="content">
+	</section>
+	<div class="container">
+		<section class="information">
+			<form action="" id="test"    method="post">
+				<div class="Questions">
+					<div class="us">
+						<div>
+							<label for="Question1">Вопрос №1 Верно ли утверждение, что содержимое одного и того же HTML-документа отображается одинаково во всех браузерах? (да/нет)</label><br>
+							<input type="text" name="Question1" id="Question1" required >
+						</div>
+						<div>
+							<label for="Question2">Вопрос №2 Какие теги из перечисленных ниже определяют элементы-контейнеры?</label><br>
+							<label for="a">a</label>
+							<input type="checkbox" id="Question2ch1" name="Question2" value="a">
+							<label for="br">br</label>
+							<input type="checkbox" id="Question2ch2" name="Question2" value="b">
+							<label for="div">div</label>
+							<input type="checkbox" id="Question2ch3" name="Question2" value="c">
+							<label for="img">img</label>
+							<input type="checkbox" id="Question2ch4" name="Question2" value="d">
+						</div>
+						<div>
+							<label for="Question3">Вопрос №3 Какой тэг определяет заголовок документа HТМL?</label><br>
+							<input type="radio" name="Question3" id="Question3r1" value="a"> <label for="body">body</label><br>
+							<input type="radio" name="Question3" id="Question3r2" value="b"> <label for="head">head</label><br>
+							<input type="radio" name="Question3" id="Question3r3" value="c"> <label for="title">title</label>
+						</div>
+						
+					</div>
+					<div class="dok">
+						<div>
+							<label for="Question4">Вопрос №4 Сколько уровней заголовков содержит HTML документ? (напишите словом)</label><br>
+							<input type="text" name="Question4" id="Question4" required >
+						</div>
+						<div>
+							<label for="Question5">Вопрос №5 Укажите все корректные типы данных в Java Script</label><br>
+							<label for="String">String</label>
+							<input type="checkbox" id="Question5ch1" name="Question5">
+							<label for="char">char</label>
+							<input type="checkbox" id="Question5ch2" name="Question5">
+							<label for="float">float</label>
+							<input type="checkbox" id="Question5ch3" name="Question5">
+							<label for="complex">complex</label>
+							<input type="checkbox" id="Question5ch4" name="Question5">
+						</div>
+						<div>
+							<label for="Question6"> Вопрос №6 Какой тэг определяет тело документа HТМL?</label><br>
+							<input type="radio" name="Question6" id="Question6r1"> <label for="body">body</label><br>
+							<input type="radio" name="Question6" id="Question6r2"> <label for="head">head</label><br>
+							<input type="radio" name="Question6" id="Question6r3"> <label for="html">html</label>
+						</div>
+					</div>
+				</div>
+				<div class="reg"><button type="button" onclick="checkTest()">Проверить тест</button></div>
+			</form>
+		</section>
+		<script>
+			function checkTest() {
+				var correctAnswers = 0;
+				var wrongAnswers = 0;
+			
+				var answers = document.getElementById("test").elements;
+				
+					if (answers[0].value === "нет") {
+						correctAnswers++;
+					} else {
+						wrongAnswers++;
+					}
+					if (Question2ch1.checked&&Question2ch3.checked&&!Question2ch2.checked&&!Question2ch4.checked) {
+						correctAnswers++;
+					} else  {
+						wrongAnswers++;
+					}
+					if (Question3r3.checked) {
+						correctAnswers++;
+					} else {
+						wrongAnswers++;
+					}
+					if (Question4.value === "шесть") {
+						correctAnswers++;
+					} else {
+						wrongAnswers++;
+					}
+					if (Question5ch1.checked&&Question5ch3.checked&&Question5ch2.checked&&!Question5ch4.checked) {
+						correctAnswers++;
+					} else {
+						wrongAnswers++;
+					}
+					if (Question6r1.checked) {
+						correctAnswers++;
+					} else {
+						wrongAnswers++;
+					}
+				alert("Правильных ответов: " + correctAnswers + "\nНеправильных ответов: " + wrongAnswers);
+			}
+			</script>
+	</div>
+	<section class="footer">
+		<div class="container">
+			<div class="contact">
+				<p>ОАО Компания</p>
+				<div class="copynav">
+						<a href="../home.html">Главная</a>
+						<a href="#">Каталог</a>
+						<a href="#">Доставка и оплата</a>
+						<a href="#">Прайс-лист</a>
+						<a href="#">Контакты</a>
+				</div>
+				<a href="#">Разработка сайтов</a>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
