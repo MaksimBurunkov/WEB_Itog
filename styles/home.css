@@ -18,7 +18,7 @@ p {
     font-weight: normal;
 }
 .banner {
-    background: url(../img/background.png) no-repeat center top/ cover;
+    background: url(background.png) no-repeat center top/ cover;
     height: 300px;
 }
 .container {
@@ -89,7 +89,7 @@ li:first-child {
     font-weight: normal;
 }
 .content {
-    background: url(../img/content.jpg) no-repeat center top/cover;
+    background: url(content.jpg) no-repeat center top/cover;
     
     height: 400px;
 }
